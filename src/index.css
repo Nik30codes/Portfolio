@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Dark mode is driven by a class on <html>, not the media query,
+   so the toggle can override the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Semantic tokens ---------- */
+:root {
+  --bg: #f5f1ea;
+  --surface: #ece5d9;
+  --fg: #121239;
+  --muted: #5c5c78;
+  --accent: #5a5fff;
+  --gold: #8c7748;
+  --line: rgba(18, 18, 57, 0.14);
+  --panel: #2a2c61;
+}
+
+.dark {
+  --bg: #0d0d18;
+  --surface: #17172b;
+  --fg: #ede9e1;
+  --muted: #9a9ab6;
+  --accent: #868aff;
+  --gold: #c9b689;
+  --line: rgba(237, 233, 225, 0.16);
+  --panel: #191a33;
+}
+
+/* `inline` lets the utilities resolve the live custom property,
+   which is what makes the theme flip without a rebuild. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+  --color-panel: var(--panel);
+
+  --font-display: "Acumin Pro", "Bricolage Grotesque", sans-serif;
+  --font-body: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, monospace;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("./assets/fonts/Acumin-RPro.otf") format("opentype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Martian Mono is already wide, so it needs far less tracking
+   than JetBrains did or the labels turn into a picket fence. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (pointer: fine) {
+  .custom-cursor-on,
+  .custom-cursor-on a,
+  .custom-cursor-on button {
+    cursor: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

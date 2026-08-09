@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nikunj Bhalla — Full Stack Developer & ML Engineer</title>
+    <meta
+      name="description"
+      content="B.Tech IT student at Manipal University Jaipur. Full stack development in React, Node and PostgreSQL, and deep learning in TensorFlow. 200+ LeetCode problems solved."
+    />
+    <meta name="author" content="Nikunj Bhalla" />
+    <meta name="theme-color" content="#F5F1EA" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nikunj Bhalla — Full Stack Developer & ML Engineer" />
+    <meta
+      property="og:description"
+      content="Full stack web development and machine learning projects, from a food ordering platform to Alzheimer's classification from MRI scans."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Applied before first paint so a dark-mode visitor never sees a cream flash. -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("theme");
+          var d = s === "dark" || (!s && matchMedia("(prefers-color-scheme: dark)").matches);
+          if (d) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
