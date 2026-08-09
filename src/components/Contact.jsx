@@ -5,8 +5,6 @@ import { profile } from "../data/content";
 const channels = [
   { text: "Email", value: profile.email, href: `mailto:${profile.email}` },
   { text: "LinkedIn", value: "in/nikunjbhalla", href: profile.links.linkedin },
-  { text: "GitHub", value: "Nik30codes", href: profile.links.github },
-  { text: "LeetCode", value: "Nikcodes30", href: profile.links.leetcode },
 ];
 
 export default function Contact() {
@@ -38,9 +36,6 @@ export default function Contact() {
       <footer className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-7">
         <p className="font-mono text-[0.62rem] text-muted">
           &copy; {new Date().getFullYear()} {profile.name}
-        </p>
-        <p className="font-mono text-[0.62rem] text-muted">
-          Built with React, Vite and Tailwind
         </p>
       </footer>
     </Section>
