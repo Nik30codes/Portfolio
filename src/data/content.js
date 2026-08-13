@@ -3,12 +3,12 @@
 export const profile = {
   name: "Nikunj Bhalla",
   initial: "N",
-  role: "Software Engineer · Full Stack Developer · Machine Learning",
+  role: "Full Stack Developer · Software Engineer",
   tagline: "I build web applications that hold up, and models that earn their accuracy.",
   location: "Prayagraj, India",
   email: "nikunjbhalla2005@gmail.com",
   summary:
-    "B.Tech Information Technology student at Manipal University Jaipur with hands-on experience across full stack web development and machine learning. I work in React, Node, Express, Python, SQL and TensorFlow — building scalable web applications and AI-driven systems. My foundation is in data structures, algorithms, OOP and database design, sharpened through 200+ LeetCode problems and shipped academic and internship projects.",
+    "B.Tech Information Technology student at Manipal University Jaipur with three months of professional full stack experience shipping production React and Node applications. I work in React 19, Node, Express 5, PostgreSQL, MongoDB, Python and TensorFlow — building web applications with real authentication, payments and test coverage rather than demo-grade scaffolding. My foundation is in data structures, algorithms, OOP and database design, sharpened through 200+ LeetCode problems.",
   links: {
     github: "https://github.com/Nik30codes",
     linkedin: "https://www.linkedin.com/in/nikunjbhalla/",
@@ -21,8 +21,8 @@ export const profile = {
 // The four numbers a recruiter should retain after eight seconds on the page.
 export const metrics = [
   { value: "200+", label: "LeetCode problems solved" },
-  { value: "73.67%", label: "Best model test accuracy" },
-  { value: "3 mo", label: "Full stack internship" },
+  { value: "3", label: "Deployed full stack apps" },
+  { value: "48 hr", label: "HackOn with Amazon build" },
   { value: "Elite", label: "NPTEL, IIT Madras" },
 ];
 
@@ -32,11 +32,11 @@ export const experience = [
     org: "Blend Vidya EdTech",
     period: "Dec 2025 — Feb 2026",
     bullets: [
-      "Developed responsive, interactive web applications in HTML5, CSS3, JavaScript and React.js, improving usability across desktop and mobile.",
-      "Built reusable React components to keep interfaces scalable, maintainable and modular.",
-      "Developed and integrated RESTful APIs with Node.js and Express.js, connecting frontend and backend services.",
-      "Optimised frontend performance by improving component rendering and code organisation.",
-      "Collaborated through Git and GitHub, following version control and structured development workflows.",
+      "Built an Attendance & Performance Tracking System in React 19, Express 5 and MongoDB Atlas, with role-based Admin, Manager and Employee dashboards.",
+      "Implemented JWT access and refresh token authentication, enforcing role-scoped permissions across all three dashboard types.",
+      "Developed attendance sessions, performance metrics with comparison charts, and department and user management.",
+      "Built reusable React components to keep interfaces scalable, maintainable and modular, and optimised rendering performance.",
+      "Developed and integrated RESTful APIs with Node.js and Express.js, collaborating through Git feature branching and structured review workflows.",
     ],
     project: {
       name: "Attendance & Performance Tracking System",
@@ -45,17 +45,45 @@ export const experience = [
       href: "https://github.com/Nik30codes/attendence-performance-tracking",
     },
   },
-  {
-    role: "Open Source Contributor",
-    org: "Career Pilot",
-    period: "2026",
-    bullets: [
-      "Contributed to the Career Pilot open source project.",
-    ],
-  },
 ];
 
 export const projects = [
+  {
+    title: "PocketBuddy — AI Financial & Wellness Assistant",
+    period: "Jun 2026",
+    kind: "Hackathon · HackOn with Amazon",
+    problem:
+      "Students manage money, sleep, food and stress as four disconnected problems. A budgeting app tracks spending, a fitness app tracks steps, a journal tracks mood — none of them connect the dots, so overspending and burnout only become visible once the damage is done.",
+    approach:
+      "Built in 48 hours with a teammate. A FastAPI and async SQLAlchemy backend over a 14-table PostgreSQL schema, containerised with Docker behind JWT auth, rate limiting and structured logging. The AI layer is a multi-provider orchestrator — Gemini 2.5 Flash as primary, Groq Llama 3.3 70B as fallback, and a rule-based local fallback so the app never hard-fails on an API outage — fronted by an intent classifier, context assembler and a memory engine that gives the chat long-term recall instead of a stateless prompt.",
+    result:
+      "Expenses log by chat, manual entry or bill photo. Weighted scoring drives burnout detection and a financial wellness score, week-over-week spending-spike detection fires at a 25% threshold, and budget alerts trigger at 70, 85 and 95% utilisation — all rendered in a React and TypeScript dashboard.",
+    stack: [
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Docker",
+      "Gemini 2.5 Flash",
+      "Groq Llama 3.3",
+      "Zustand",
+      "Recharts",
+      "Tailwind CSS",
+    ],
+    note: "Built with Bhavya Kundalia as team MoFu for HackOn with Amazon, a 48-hour hackathon.",
+    links: [
+      {
+        text: "Live app",
+        href: "https://pocketbuddy-kz85-indol.vercel.app/",
+      },
+      {
+        text: "Repository",
+        href: "https://github.com/Nik30codes/Pocketbuddy",
+      },
+    ],
+  },
   {
     title: "Deep Learning Alzheimer's Classification",
     period: "Mar 2026",
@@ -105,6 +133,10 @@ export const projects = [
     note: "Team project — I built the customer side, frontend and backend. The admin panel was built by a teammate.",
     links: [
       {
+        text: "Live site",
+        href: "https://food-ordering-system-five-pi.vercel.app/",
+      },
+      {
         text: "Repository",
         href: "https://github.com/Nik30codes/Food-ordering-system",
       },
@@ -149,15 +181,38 @@ export const skills = [
   },
   {
     group: "Frontend",
-    items: ["React.js", "HTML5", "CSS3", "Tailwind CSS"],
+    items: [
+      "React 19",
+      "React Router",
+      "Vite",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+      "Recharts",
+    ],
   },
   {
     group: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs"],
+    items: [
+      "Node.js",
+      "Express 5",
+      "REST APIs",
+      "JWT & OAuth",
+      "Redis",
+      "Razorpay",
+      "Cloudinary",
+    ],
   },
   {
     group: "Databases",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Mongoose"],
+    items: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Mongoose",
+      "SQL Migrations",
+      "Query Indexing",
+    ],
   },
   {
     group: "Machine learning",
@@ -172,8 +227,18 @@ export const skills = [
     ],
   },
   {
-    group: "Tools",
-    items: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Spyder"],
+    group: "Testing & tooling",
+    items: [
+      "Vitest",
+      "Supertest",
+      "React Testing Library",
+      "Zod",
+      "Git",
+      "GitHub",
+      "Vercel",
+      "VS Code",
+      "Jupyter Notebook",
+    ],
   },
   {
     group: "Core CS",
@@ -182,6 +247,7 @@ export const skills = [
       "Object-Oriented Programming",
       "Operating Systems",
       "DBMS",
+      "Web Security",
     ],
   },
 ];
@@ -230,8 +296,8 @@ export const certifications = [
 export const interests = [
   "Web Development",
   "Machine Learning",
-  "Open Source",
   "Applied AI",
+  "System Design",
   "Problem Solving",
   "Fitness",
 ];
