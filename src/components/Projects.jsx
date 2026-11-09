@@ -1,5 +1,4 @@
 import Section from "./Section";
-import ModelComparison from "./ModelComparison";
 import { projects } from "../data/content";
 
 export default function Projects() {
@@ -51,7 +50,6 @@ export default function Projects() {
               <p className="font-mono mt-5 text-[0.62rem] text-accent">{p.note}</p>
             )}
 
-            {p.viz === "model-comparison" && <ModelComparison />}
 
             {p.links.length > 0 && (
               <div className="mt-5 flex gap-5">

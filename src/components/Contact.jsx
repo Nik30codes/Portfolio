@@ -11,8 +11,8 @@ export default function Contact() {
   return (
     <Section id="contact" index="05" title="Get in touch">
       <p className="mb-9 max-w-xl text-[15px] leading-relaxed text-muted">
-        Open to software engineering and machine learning internships and
-        graduate roles. Based in {profile.location}, happy to work remotely.
+        Seeking an AI/ML Engineer Internship for Winter 2026–27.
+        Based in {profile.location}, studying Information Technology at Manipal University Jaipur.
       </p>
 
       <ul className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
